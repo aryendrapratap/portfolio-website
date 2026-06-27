@@ -1,8 +1,8 @@
-import { ArrowUpRight, Sparkles, Check } from 'lucide-react'
+import { Sparkles, Check } from 'lucide-react'
 import { GithubIcon } from '@/components/brand-icons'
 import { SectionHeading } from '@/components/section-heading'
 import { Reveal } from '@/components/reveal'
-import { projects, type Project } from '@/lib/portfolio-data'
+import { projects, profile, type Project } from '@/lib/portfolio-data'
 import { cn } from '@/lib/utils'
 
 function TechRow({ tech }: { tech: string[] }) {
@@ -24,15 +24,9 @@ function ProjectLinks({ project }: { project: Project }) {
   return (
     <div className="flex flex-wrap gap-3">
       <a
-        href="#"
-        className="inline-flex items-center gap-1.5 rounded-md bg-primary px-4 py-2 font-mono text-xs font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
-        aria-label={`Live demo of ${project.title}`}
-      >
-        Live Demo
-        <ArrowUpRight className="size-3.5" />
-      </a>
-      <a
-        href="#"
+        href={profile.github}
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-flex items-center gap-1.5 rounded-md border border-border px-4 py-2 font-mono text-xs text-foreground transition-colors hover:border-primary/60 hover:text-primary"
         aria-label={`GitHub repository of ${project.title}`}
       >

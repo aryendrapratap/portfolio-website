@@ -10,7 +10,7 @@ export const profile = {
   githubHandle: 'github.com/aryendrapratap',
   linkedin: 'https://linkedin.com/in/aryendra-pratap-singh-284b391bb',
   linkedinHandle: 'linkedin.com/in/aryendra-pratap-singh-284b391bb',
-  resume: '#',
+  resume: '/aryendra-pratap-singh-resume.pdf',
 }
 
 export const about = {

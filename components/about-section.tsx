@@ -29,7 +29,29 @@ export function AboutSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={120}>
+          <Reveal delay={120} className="flex flex-col gap-6">
+            <div className="group relative overflow-hidden rounded-xl border border-border bg-card">
+              <div
+                className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent-cyan-soft blur-3xl"
+                aria-hidden="true"
+              />
+              <img
+                src="/images/aryendra-portrait.png"
+                alt="Portrait of Aryendra Pratap Singh"
+                className="relative aspect-[4/5] w-full object-cover object-top transition duration-500 [filter:grayscale(0.35)_contrast(1.02)] group-hover:[filter:grayscale(0)]"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"
+                aria-hidden="true"
+              />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between px-4 py-3 font-mono text-[11px] text-muted-foreground">
+                <span className="inline-flex items-center gap-2">
+                  <span className="size-1.5 rounded-full bg-primary" aria-hidden="true" />
+                  {profile.name}
+                </span>
+                <span className="text-primary">{'</>'}</span>
+              </div>
+            </div>
             <dl className="rounded-lg border border-border bg-card p-6 font-mono text-sm">
               <div className="flex flex-col gap-1 py-2">
                 <dt className="text-xs uppercase tracking-widest text-primary">

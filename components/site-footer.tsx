@@ -29,6 +29,7 @@ export function SiteFooter() {
               </a>
               <a
                 href={profile.resume}
+                download
                 className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-sm text-foreground transition-colors hover:border-primary/60 hover:text-primary"
               >
                 <Download className="size-4" />

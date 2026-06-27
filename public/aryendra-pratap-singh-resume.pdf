@@ -1,0 +1,62 @@
+
+
+ARYENDRA PRATAP SINGH
+Toronto, ON | apsingh2@lakeheadu.ca | +1 (807) 356-2434
+linkedin.com/in/aryendra-pratap-singh-284b391bb | github.com/aryendrapratap
+Summary
+Honours Computer Science undergraduate building AI-powered and full-stack systems across backend, databases,
+and applied ML. Hands-on with Python/FastAPI services, Next.js/React frontends, relational database design, and
+LLM application patterns including RAG, NLP, and OCR. Seeking software development, data, AI/ML, and IT
+internship or co-op roles.
+Education
+Lakehead UniversityThunder Bay, ON
+Honours Bachelor of Science in Computer ScienceExpected April 2027
+CGPA: 78.31% | Relevant Coursework: Data Structures, Algorithm Design & Analysis, Operating Systems,
+Database Management Systems, Computer Networks & Distributed Systems, Software Engineering, Object-Oriented
+Programming, Big Data, Systems Analysis & Design
+Technical Skills
+Languages: Java, C++, Python, SQL, JavaScript, TypeScript, Kotlin, HTML, CSS
+AI & Data:  RAG, NLP, OCR, semantic search, embeddings, vector databases, document classification, entity
+extraction, prompt engineering
+Backend & APIs: FastAPI, REST APIs, JWT authentication, SQLAlchemy, modular service architecture
+Databases: MySQL, PostgreSQL, relational & schema design, stored procedures, triggers, views, indexing
+Frontend: React, Next.js
+Cloud & DevOps: Docker, Vercel, Firebase, Supabase, Redis, Git, GitHub, Linux
+IT & Systems: Help desk support, troubleshooting, ticketing workflows, system documentation, data validation
+Technical Projects
+AI Real Estate Assistant | Python, FastAPI, Next.js, React, LangChain, ChromaDB, PostgreSQL, Docker
+• Built a full-stack AI platform for conversational property search, market analytics, and investment analysis.
+• Engineered a RAG pipeline with LangChain, vector embeddings, and ChromaDB for context-aware semantic rec-
+ommendations.
+• Developed modular FastAPI services with JWT authentication, session management, and SQLAlchemy integration.
+• Integrated multi-provider LLM support (OpenAI, Gemini, Claude) behind a unified conversational framework.
+DocumentAI — Intelligent Document Processing | Python, Tesseract OCR, spaCy, NLTK, SQL
+• Developed an AI system to extract, summarize, and organize content from PDFs, scanned files, and images.
+• Implemented Tesseract OCR ingestion, converting image-based documents into machine-readable text for process-
+ing.
+• Designed spaCy and NLTK NLP pipelines for entity recognition, keyword extraction, and document classification.
+• Added AI summarization and semantic search to accelerate document review and information retrieval.
+HELOC Portfolio Analytics Database System | MySQL, SQL, Stored Procedures, Triggers, Views
+• Designed a normalized SQL analytics system modeling HELOC portfolio data across accounts, balances, and
+delinquency.
+• Built stored procedures, triggers, and analytical views to automate portfolio-level reporting and calculations.
+• Generated 150+ multi-period records and queries analyzing utilization, roll-rates, and customer risk segments.
+IT Help Desk Simulation & Ticketing Workflow | Excel, SQL, IT Support Workflows
+• Designed a simulated service-desk workflow modeling intake, prioritization, escalation, tracking, and resolution.
+• Documented troubleshooting procedures for login, software, network connectivity, and account access issues.
+• Analyzed ticket trends to surface recurring issues and produce operational reports for process improvement.
+Experience
+Intern | MyGovDelhi, India
+May 2022 – July 2022
+• Digitized and validated 600+ public records in structured information systems with consistent metadata and nam-
+ing.
+• Generated structured reports and datasets supporting record visibility and decision-making.
+• Drove process improvements that reduced manual effort by∼20% while improving documentation accuracy.
+Intern | EisenvaultDelhi, India
+May 2021 – July 2021
+• Supported internal information systems and enterprise content management through data organization and work-
+flow documentation.
+• Validated system records and resolved inconsistencies to maintain reliable, accessible information.
+Stock Unloader Associate | Walmart CanadaThunder Bay, ON
+May 2026 – Present — Process high-volume merchandise with accuracy and adherence to safety and operational
+procedures in a fast-paced team environment.
