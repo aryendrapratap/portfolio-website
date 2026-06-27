@@ -4,7 +4,7 @@ export const profile = {
     'Computer Science undergrad building AI-powered and full-stack systems — backend, databases, and applied ML.',
   location: 'Toronto / Thunder Bay, ON, Canada',
   status:
-    'Honours BSc Computer Science, Lakehead University, expected April 2027. Open to Summer 2026 / 2027 internships and co-ops.',
+    'Honours BSc Computer Science, Lakehead University, expected April 2027. Open to 2026 / 2027 internships and co-ops.',
   email: 'apsingh2@lakeheadu.ca',
   github: 'https://github.com/aryendrapratap',
   githubHandle: 'github.com/aryendrapratap',
@@ -15,7 +15,7 @@ export const profile = {
 
 export const about = {
   paragraph:
-    'CS student focused on software development, applied AI (RAG, NLP, OCR), and data systems. Comfortable across the stack — Python/FastAPI backends, Next.js/React frontends, and relational database design. Hands-on with LLM application patterns, vector search, and turning messy real-world data into structured, queryable systems.',
+    'Computer Science undergraduate at Lakehead University (Honours, expected 2027), focused on software development, applied AI, and data systems. I work across the full stack — Python and FastAPI on the backend, Next.js and React on the frontend, with relational database design underneath — but I am most drawn to the layer where machine learning meets real products: retrieval-augmented generation, semantic search, OCR, and NLP.That shows up in what I build. I have engineered a full-stack AI real estate assistant with a RAG pipeline over a vector database, a document-processing platform that turns scanned PDFs into searchable structured data, and a SQL analytics system modeling a loan portfolio end to end. Two information-systems internships taught me the less glamorous half of the job too — validating hundreds of records, cleaning messy data, and documenting workflows so others can trust the output.Right now I am looking for software, AI/ML, data, or IT co-op and internship roles where I can keep shipping things that work.',
 }
 
 export type Project = {
