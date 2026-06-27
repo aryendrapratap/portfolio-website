@@ -52,34 +52,6 @@ export function AboutSection() {
                 <span className="text-primary">{'</>'}</span>
               </div>
             </div>
-            <dl className="rounded-lg border border-border bg-card p-6 font-mono text-sm">
-              <div className="flex flex-col gap-1 py-2">
-                <dt className="text-xs uppercase tracking-widest text-primary">
-                  Education
-                </dt>
-                <dd className="text-foreground">Honours BSc Computer Science</dd>
-              </div>
-              <div className="flex flex-col gap-1 border-t border-border py-2">
-                <dt className="text-xs uppercase tracking-widest text-primary">
-                  Status
-                </dt>
-                <dd className="text-foreground">Expected April 2027</dd>
-              </div>
-              <div className="flex flex-col gap-1 border-t border-border py-2">
-                <dt className="text-xs uppercase tracking-widest text-primary">
-                  Seeking
-                </dt>
-                <dd className="text-foreground">
-                  Summer 2026 / 2027 internships &amp; co-ops
-                </dd>
-              </div>
-              <div className="flex flex-col gap-1 border-t border-border py-2">
-                <dt className="text-xs uppercase tracking-widest text-primary">
-                  Based in
-                </dt>
-                <dd className="text-foreground">{profile.location}</dd>
-              </div>
-            </dl>
           </Reveal>
         </div>
       </div>
