@@ -4,7 +4,7 @@ export const profile = {
     'Computer Science undergrad building AI-powered and full-stack systems — backend, databases, and applied ML.',
   location: 'Toronto / Thunder Bay, ON, Canada',
   status:
-    'Honours BSc Computer Science, Lakehead University, expected April 2027. Open to 2026 / 2027 internships and co-ops.',
+    'Honours BSc Computer Science, Lakehead University, expected April 2027. Open to 2027 internships and co-ops.',
   email: 'apsingh2@lakeheadu.ca',
   github: 'https://github.com/aryendrapratap',
   githubHandle: 'github.com/aryendrapratap',
@@ -15,7 +15,7 @@ export const profile = {
 
 export const about = {
   paragraph:
-    'Computer Science undergraduate at Lakehead University (Honours, expected 2027), focused on software development, applied AI, and data systems. I work across the full stack — Python and FastAPI on the backend, Next.js and React on the frontend, with relational database design underneath — but I am most drawn to the layer where machine learning meets real products: retrieval-augmented generation, semantic search, OCR, and NLP.That shows up in what I build. I have engineered a full-stack AI real estate assistant with a RAG pipeline over a vector database, a document-processing platform that turns scanned PDFs into searchable structured data, and a SQL analytics system modeling a loan portfolio end to end. Two information-systems internships taught me the less glamorous half of the job too — validating hundreds of records, cleaning messy data, and documenting workflows so others can trust the output.Right now I am looking for software, AI/ML, data, or IT co-op and internship roles where I can keep shipping things that work.',
+    'Computer Science undergraduate at Lakehead University (Honours, expected 2027), focused on software development, applied AI, and data systems. I work across the full stack — Python and FastAPI on the backend, Next.js and React on the frontend, with relational database design underneath — and I am most drawn to the layer where machine learning meets real products: retrieval-augmented generation, semantic search, OCR, and NLP. I built RegenMed Form Checker at the Thunder Bay AI Hackathon, an AI reviewer for scanned regulatory forms. I have also engineered a full-stack AI real estate assistant with a RAG pipeline, a document-processing platform, and a SQL analytics system modeling a loan portfolio end to end. My information-systems internships taught me to validate records, clean messy data, and document workflows so others can trust the output. Right now I am looking for software, AI/ML, data, or IT roles where I can keep shipping things that work.',
 }
 
 export type Project = {
@@ -28,6 +28,8 @@ export type Project = {
   tech: string[]
   features: string[]
   stats?: { value: string; label: string }[]
+  repo?: string
+  label?: string
 }
 
 export const projects: Project[] = [
@@ -63,8 +65,29 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'documentai',
+    id: 'regenmed-form-checker',
     index: '02',
+    title: 'RegenMed Form Checker',
+    summary: 'AI document reviewer for scanned tissue-bank regulatory forms.',
+    label: 'Hackathon · Sept 2026',
+    description:
+      'An AI-powered web app built at the Thunder Bay AI Hackathon that reviews scanned regulatory forms, catches routine omissions, and routes uncertain readings for human review.',
+    tech: ['Python', 'FastAPI', 'Uvicorn', 'React', 'TypeScript', 'Gemini API', 'Render', 'Git'],
+    features: [
+      'Cuts review time by approximately 75% — from 85 seconds to about 21 seconds.',
+      '23-rule validation engine pinpoints issues by page, section, row, and field.',
+      'Concurrent multimodal extraction with local form matching and second-opinion verification.',
+      'Health checks, clear upload errors, environment-based secrets, and a CLI regression harness.',
+    ],
+    stats: [
+      { value: '~75%', label: 'faster review' },
+      { value: '23', label: 'validation rules' },
+    ],
+    repo: 'https://github.com/aryendrapratap/regenmed-form-checker',
+  },
+  {
+    id: 'documentai',
+    index: '03',
     title: 'DocumentAI',
     summary: 'Intelligent document processing platform.',
     description:
@@ -79,7 +102,7 @@ export const projects: Project[] = [
   },
   {
     id: 'heloc-analytics',
-    index: '03',
+    index: '04',
     title: 'HELOC Portfolio Analytics Database System',
     summary:
       'SQL analytics system modeling a Home Equity Line of Credit portfolio.',
@@ -106,7 +129,7 @@ export const projects: Project[] = [
   },
   {
     id: 'it-help-desk',
-    index: '04',
+    index: '05',
     title: 'IT Help Desk Simulation & Ticketing Workflow',
     summary:
       'Simulated service-desk workflow from intake to resolution.',
@@ -137,11 +160,13 @@ export const skillGroups: { label: string; skills: string[] }[] = [
       'Document classification',
       'Entity extraction',
       'Prompt engineering',
+      'Information retrieval',
+      'Summarization',
     ],
   },
   {
     label: 'Backend',
-    skills: ['FastAPI', 'REST APIs', 'Auth (JWT)', 'SQLAlchemy', 'Modular services'],
+    skills: ['FastAPI', 'Uvicorn', 'REST APIs', 'Auth (JWT)', 'SQLAlchemy', 'Modular services', 'Pydantic', 'JSON Schema'],
   },
   {
     label: 'Databases',
@@ -157,11 +182,11 @@ export const skillGroups: { label: string; skills: string[] }[] = [
   },
   {
     label: 'Frontend',
-    skills: ['React', 'Next.js'],
+    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Vite', 'Responsive UI'],
   },
   {
     label: 'Cloud & DevOps',
-    skills: ['Docker', 'Vercel', 'Firebase', 'Supabase', 'Redis', 'Git / GitHub', 'Linux'],
+    skills: ['Docker', 'Vercel', 'Render', 'Firebase', 'Supabase', 'Redis', 'Git / GitHub', 'Linux', 'CI/CD'],
   },
   {
     label: 'IT & Systems',
@@ -187,6 +212,15 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    role: 'Stock Unloader Associate',
+    org: 'Walmart Canada',
+    location: 'Thunder Bay, ON',
+    period: 'May 2026–Present',
+    current: true,
+    description:
+      'Process incoming merchandise, organize inventory, maintain cold-chain compliance, and support replenishment in a high-volume environment while following safety procedures and providing customer service.',
+  },
+  {
     role: 'Intern',
     org: 'MyGov',
     location: 'Delhi, India',
@@ -207,11 +241,12 @@ export const experiences: Experience[] = [
       'Supported internal information systems and enterprise content management; data organization, workflow documentation, and digital repository management.',
   },
   {
-    role: 'Stock Unloader Associate',
-    org: 'Walmart Canada',
+    role: 'Part-Time Team Member',
+    org: 'Masala Grille',
     location: 'Thunder Bay, ON',
-    period: 'May 2026–Present',
-    current: true,
+    period: 'Oct 2024–Apr 2025',
+    description:
+      'Worked in a fast-paced customer-facing environment, building teamwork, reliability, problem-solving, time management, and professional communication.',
   },
 ]
 

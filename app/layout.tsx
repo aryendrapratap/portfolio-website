@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 const siteUrl = 'https://aryendra-pratap-singh.vercel.app'
 const description =
-  'Computer Science undergrad building AI-powered and full-stack systems — backend, databases, and applied ML. Open to Summer 2026 / 2027 internships and co-ops.'
+  'Computer Science undergrad building AI-powered and full-stack systems — backend, databases, applied ML, and intelligent document processing. Open to 2027 internships and co-ops.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     'Lakehead University',
     'RAG',
     'FastAPI',
+    'Gemini API',
+    'Intelligent Document Processing',
+    'OCR',
     'Next.js',
   ],
   authors: [{ name: 'Aryendra Pratap Singh' }],

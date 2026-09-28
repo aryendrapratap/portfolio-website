@@ -16,8 +16,7 @@ export function SiteFooter() {
           <Reveal>
             <p className="font-mono text-sm text-primary">{"// let's build something"}</p>
             <p className="mt-4 max-w-xl text-2xl font-bold leading-snug tracking-tight text-foreground text-balance sm:text-3xl">
-              Open to Summer 2026 / 2027 internships and co-ops in software, AI/ML,
-              and data.
+              Open to 2027 internships and co-ops in software, AI/ML, and data.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
