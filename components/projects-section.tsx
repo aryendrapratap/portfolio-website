@@ -24,7 +24,7 @@ function ProjectLinks({ project }: { project: Project }) {
   return (
     <div className="flex flex-wrap gap-3">
       <a
-        href={profile.github}
+        href={project.repo ?? profile.github}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-1.5 rounded-md border border-border px-4 py-2 font-mono text-xs text-foreground transition-colors hover:border-primary/60 hover:text-primary"
@@ -114,6 +114,11 @@ function StandardCard({ project, delay }: { project: Project; delay: number }) {
           {project.title}
         </h3>
         <p className="mt-2 font-mono text-xs text-primary">{project.summary}</p>
+        {project.label && (
+          <p className="mt-3 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+            {project.label}
+          </p>
+        )}
         <p className="mt-4 leading-relaxed text-muted-foreground text-pretty">
           {project.description}
         </p>
@@ -176,7 +181,9 @@ export function ProjectsSection() {
 
           <div className={cn('grid gap-8 lg:grid-cols-2')}>
             {rest.map((project, i) => (
-              <StandardCard key={project.id} project={project} delay={i * 90} />
+              <div key={project.id} className={i === rest.length - 1 && rest.length % 2 !== 0 ? 'lg:col-span-2' : ''}>
+                <StandardCard project={project} delay={i * 90} />
+              </div>
             ))}
           </div>
         </div>
