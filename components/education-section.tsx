@@ -23,7 +23,7 @@ export function EducationSection() {
                 </h3>
                 <p className="font-mono text-sm text-primary">{education.degree}</p>
                 <p className="mt-1 font-mono text-xs text-muted-foreground">
-                  {education.location} · {education.expected}
+                  {education.location} · {education.expected} · {education.gpa}
                 </p>
               </div>
             </div>
