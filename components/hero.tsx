@@ -1,124 +1,39 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { ArrowDown, ArrowUpRight, Download, Mail } from 'lucide-react'
+import { ArrowDown, Download, Mail } from 'lucide-react'
 import { GithubIcon } from '@/components/brand-icons'
 import { profile } from '@/lib/portfolio-data'
 
-const TYPED = 'software · ai/ml · data'
-
-function useTyped(text: string) {
-  const [out, setOut] = useState('')
-  const [done, setDone] = useState(false)
-
-  useEffect(() => {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReduced) {
-      setOut(text)
-      setDone(true)
-      return
-    }
-    let i = 0
-    const id = window.setInterval(() => {
-      i += 1
-      setOut(text.slice(0, i))
-      if (i >= text.length) {
-        window.clearInterval(id)
-        setDone(true)
-      }
-    }, 55)
-    return () => window.clearInterval(id)
-  }, [text])
-
-  return { out, done }
+function Smile() {
+  return <svg aria-hidden="true" viewBox="0 0 48 48" className="size-9 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="24" cy="24" r="19" /><path d="M17 20v1m14-1v1M16 28c2 5 6 7 9 7s7-2 9-7" /></svg>
 }
 
 export function Hero() {
-  const { out, done } = useTyped(TYPED)
-
   return (
     <section id="top" className="relative overflow-hidden">
-      <div
-        className="pointer-events-none absolute inset-0 grid-lines opacity-[0.35]"
-        aria-hidden="true"
-        style={{
-          maskImage:
-            'radial-gradient(ellipse 90% 60% at 50% 0%, black 30%, transparent 75%)',
-          WebkitMaskImage:
-            'radial-gradient(ellipse 90% 60% at 50% 0%, black 30%, transparent 75%)',
-        }}
-      />
-      <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-20 sm:pt-28 lg:px-8 lg:pt-32">
-        {/* terminal command line */}
-        <div className="mb-8 flex items-center gap-3 font-mono text-sm">
-          <span className="text-primary">$</span>
-          <span className="text-muted-foreground">whoami</span>
-          <span className="text-foreground">{out}</span>
-          <span
-            className={`inline-block h-4 w-2 bg-primary ${done ? 'caret-blink' : ''}`}
-            aria-hidden="true"
-          />
+      <div className="mx-auto grid max-w-[1200px] items-stretch gap-12 px-6 pb-16 pt-16 md:grid-cols-[1.1fr_.9fr] md:gap-16 md:pb-24 md:pt-20 lg:px-10">
+        <div className="relative z-10 flex flex-col items-start justify-center">
+          <p className="font-mono text-xs font-medium uppercase tracking-[.18em] text-muted-foreground">software · <strong className="font-bold underline decoration-accent decoration-2 underline-offset-4">ai/ml</strong> · data</p>
+          <p className="mt-8 font-mono text-xs font-medium uppercase tracking-[.18em] text-muted-foreground">Hi, my name is</p>
+          <h1 className="mt-4 flex flex-col items-start gap-3 font-mono text-4xl font-bold uppercase leading-[1.05] tracking-[.035em] sm:text-6xl lg:text-[4.3rem]">
+            <span className="tilted-label inline-flex -rotate-[4deg] items-center gap-3 border-2 border-foreground bg-secondary px-4 py-3 sm:px-6"><Smile />Aryendra</span>
+            <span className="tilted-label ml-5 inline-block rotate-[2deg] border-2 border-foreground bg-secondary px-4 py-3 sm:ml-12 sm:px-6">Pratap Singh</span>
+          </h1>
+          <svg aria-hidden="true" viewBox="0 0 220 110" className="pointer-events-none absolute right-[-2rem] top-[27%] hidden h-28 w-52 text-foreground md:block" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path className="arrow-draw" d="M8 72c31-49 72-63 99-33 24 28-21 50-31 24-9-25 31-43 75-35 19 4 33 14 48 29m0 0-2-21m2 21-21-4" /></svg>
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-pretty sm:text-xl">{profile.subhead}</p>
+          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
+            <span>{profile.location}</span><span aria-hidden="true">/</span><span className="max-w-md">{profile.status}</span>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" className="hard-hover inline-flex min-h-12 items-center gap-2 border-2 border-foreground bg-primary px-5 py-3 font-mono text-xs font-bold uppercase tracking-wider text-primary-foreground">View Projects<ArrowDown className="size-4" /></a>
+            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="hard-hover inline-flex min-h-12 items-center gap-2 border-2 border-foreground px-5 py-3 font-mono text-xs font-bold uppercase tracking-wider"><GithubIcon className="size-4" />GitHub</a>
+            <a href={profile.resume} download className="hard-hover inline-flex min-h-12 items-center gap-2 border-2 border-foreground px-5 py-3 font-mono text-xs font-bold uppercase tracking-wider"><Download className="size-4" />Download Résumé</a>
+            <a href={`mailto:${profile.email}`} className="hard-hover inline-flex min-h-12 items-center gap-2 border-2 border-foreground px-5 py-3 font-mono text-xs font-bold uppercase tracking-wider"><Mail className="size-4" />Email me</a>
+          </div>
+          <div className="mt-12 flex items-center gap-2 font-mono text-[10px] font-medium uppercase tracking-[.16em] text-muted-foreground"><span className="h-px w-8 bg-accent" />Scroll for proof<svg aria-hidden="true" viewBox="0 0 24 32" className="h-6 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2c-2 8 2 15 0 25m0 0-7-7m7 7 7-7" /></svg></div>
         </div>
-
-        <p className="mb-4 font-mono text-sm uppercase tracking-[0.25em] text-primary">
-          Hi, my name is
-        </p>
-
-        <h1 className="font-heading text-5xl font-bold leading-[0.95] tracking-tight text-balance sm:text-7xl lg:text-8xl">
-          {profile.name}.
-        </h1>
-
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty sm:text-xl">
-          {profile.subhead}
-        </p>
-
-        <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-muted-foreground">
-          <span className="inline-flex items-center gap-2">
-            <span className="size-1.5 rounded-full bg-primary" aria-hidden="true" />
-            {profile.location}
-          </span>
-          <span className="hidden sm:inline text-border">/</span>
-          <span className="max-w-md text-pretty">{profile.status}</span>
-        </div>
-
-        <div className="mt-10 flex flex-wrap gap-3">
-          <a
-            href="#projects"
-            className="group inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 font-mono text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
-          >
-            View Projects
-            <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" />
-          </a>
-          <a
-            href={profile.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-sm text-foreground transition-colors hover:border-primary/60 hover:text-primary"
-          >
-            <GithubIcon className="size-4" />
-            GitHub
-          </a>
-          <a
-            href={profile.resume}
-            download
-            className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-sm text-foreground transition-colors hover:border-primary/60 hover:text-primary"
-          >
-            <Download className="size-4" />
-            Download Résumé
-          </a>
-          <a
-            href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 font-mono text-sm text-foreground transition-colors hover:border-primary/60 hover:text-primary"
-          >
-            <Mail className="size-4" />
-            Email me
-          </a>
-        </div>
-
-        <div className="mt-16 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          <span className="h-px w-10 bg-border" aria-hidden="true" />
-          Scroll for proof
-          <ArrowUpRight className="size-3.5 text-primary" />
+        <div className="relative order-last md:order-none">
+          <img src="/images/aryendra-portrait.png" alt="Portrait of Aryendra Pratap Singh" className="h-full max-h-[690px] min-h-[380px] w-full object-cover object-top grayscale" />
         </div>
       </div>
     </section>

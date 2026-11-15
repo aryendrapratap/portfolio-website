@@ -1,16 +1,18 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
+import { IBM_Plex_Mono, DM_Sans } from 'next/font/google'
 import './globals.css'
 
-const spaceGrotesk = Space_Grotesk({
-  variable: '--font-space-grotesk',
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: '--font-plex-mono',
   subsets: ['latin'],
+  weight: ['500', '700'],
   display: 'swap',
 })
-const jetbrainsMono = JetBrains_Mono({
-  variable: '--font-jetbrains-mono',
+const dmSans = DM_Sans({
+  variable: '--font-dm-sans',
   subsets: ['latin'],
+  weight: ['400', '500'],
   display: 'swap',
 })
 
@@ -53,8 +55,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#0A0A0B',
+  colorScheme: 'light',
+  themeColor: '#F8E8D0',
 }
 
 export default function RootLayout({
@@ -63,11 +65,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      className={`dark ${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background`}
-    >
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${ibmPlexMono.variable} ${dmSans.variable} bg-background`}>
+      <body className="antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
