@@ -9,7 +9,7 @@ export function AboutSection() {
     <div className="mx-auto max-w-[1200px] px-6 py-20 lg:px-10 lg:py-28">
       <Reveal><SectionHeading num="01" title="About" /></Reveal>
       <div className="mt-14 grid items-center gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
-        <Reveal><img src="/placeholder.svg" alt="Desk and keyboard workspace" className="aspect-[4/5] max-h-[620px] w-full object-cover grayscale" /></Reveal>
+        <Reveal><img src="/images/editorial-desk.png" alt="Desk and keyboard workspace" className="aspect-[4/5] max-h-[620px] w-full object-cover grayscale" /></Reveal>
         <Reveal delay={100}>
           <div className="mb-6 inline-block border-2 border-foreground bg-secondary px-4 py-3 font-mono text-sm font-bold uppercase">{profile.name} &lt;/&gt;</div>
           <p className="text-base leading-8 text-pretty sm:text-lg"><strong className="font-mono text-sm font-bold uppercase leading-relaxed">Computer Science undergraduate at Lakehead University (Honours, expected 2027), focused on software development, applied AI, and data systems.</strong>{about.paragraph.slice('Computer Science undergraduate at Lakehead University (Honours, expected 2027), focused on software development, applied AI, and data systems.'.length)}</p>
